@@ -1,0 +1,42 @@
+# Node / Electron
+node_modules/
+dist/
+build/
+out/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Environment variables
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+services/api/data/*.db
+
+# PyInstaller build artifacts (keep services/api/api.spec)
+services/api/dist/
+services/api/build/
+services/api/*.spec
+!services/api/api.spec
+
+# Runtime-regenerated caches (NOT packaged — electron-builder.yml ships only
+# sp500.json). edgar_client.refresh_cik_map() rewrites this weekly from
+# sec.gov/files/company_tickers.json, so the committed copy is pure churn.
+services/api/data/cik_map.json
+
+# Secrets
+*.key
+services/api/data/launch_token.txt
